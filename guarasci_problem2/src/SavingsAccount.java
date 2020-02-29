@@ -2,23 +2,36 @@
 public class SavingsAccount {
 	private static double annualInterestRate;
 	private double savingsBalance;
+	int saverNumber;
 	
-	public double calculateMonthlyInterest (double annualInterestRate) {
-		savingsBalance = savingsBalance + (savingsBalance * (annualInterestRate / 12));
+	public SavingsAccount (int saverNumber, double savingsBalance) {
+		this.saverNumber = saverNumber;
+		this.savingsBalance = savingsBalance;
+	}
+	
+	public double calculateMonthlyInterest () {
+		double tempSavingsBalance = getSavingsBalance() * (getAnnualInterestRate() / 12);
 		
+		return tempSavingsBalance;
+	}
+	
+	public static void modifyInterestRate (double inputtedInterestRate) {
+		annualInterestRate = inputtedInterestRate;
+	}
+	
+	public int getSaverNumber () {
+		return saverNumber;
+	}
+	
+	public double getSavingsBalance () {
 		return savingsBalance;
 	}
 	
-	public static void modifyInterestRate () {
-		int newValue=0;
-		setAnnualInterestRate(newValue);
+	public void setSavingsBalance (double savingsBalance) {
+		this.savingsBalance = savingsBalance;
 	}
-
+	
 	public static double getAnnualInterestRate() {
 		return annualInterestRate;
-	}
-
-	public static void setAnnualInterestRate(double annualInterestRate) {
-		SavingsAccount.annualInterestRate = annualInterestRate;
 	}
 }
