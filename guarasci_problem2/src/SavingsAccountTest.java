@@ -1,3 +1,9 @@
+/*
+ * Casey Guarasci
+ * COP 3330 • Dr. Hollander
+ * Assignment 3: Problem 2
+ */
+
 import java.text.DecimalFormat;
 
 public class SavingsAccountTest {

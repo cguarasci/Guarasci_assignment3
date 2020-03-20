@@ -1,3 +1,9 @@
+/*
+ * Casey Guarasci
+ * COP 3330 • Dr. Hollander
+ * Assignment 3: Problem 1
+ */
+
 import java.security.SecureRandom;
 import java.util.Scanner;
 
